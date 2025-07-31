@@ -1,0 +1,47 @@
+.as-seen-in {
+    padding: 20px 0;
+    background-color:  #f9f7f7; /* Dark background */
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .as-seen-in h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #0a0a0a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .logo-grid {
+    display: flex;
+    gap: 50px;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+  
+  .logo {
+    height: 60px;
+    width: auto;
+    /* filter: grayscale(100%); */
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: grayscale(0%);
+  
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-50%);
+    }
+  }
