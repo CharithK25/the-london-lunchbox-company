@@ -16,6 +16,7 @@
     box-shadow: none;  
   }
   .imgs-snacks {
+    position: relative;
     width: 100%;
     height: 100%;
   }
@@ -60,6 +61,92 @@
     padding: 2rem 1rem;
     background-color: #f2eeee; 
   }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #f4f4f4;
+    padding: 30px 20px;
+  }
+  
+  .footer-column {
+    flex: 1 1 20%;
+    margin: 10px;
+    text-align: left;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px 0 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+  }
+  .footer-column ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .footer-column li:hover {
+    color: #000;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  /* Styling for social icons */
+.social-icon {
+  width: 20px;
+  height: 20px;
+  /* margin-right: 8px; */
+  vertical-align: middle;
+}
+.cart-tilty {
+  position: absolute;   /* sits on top of the hero */
+  z-index: 2;
+  width: 180px;         /* tweak to taste */
+  height: 180px;
+  border-radius: 12px;
+}
+
+/* Example positions for your 3 images — adjust these */
+/* .cart-tilty.i0 { left: 6%;  bottom: 14%; }
+.cart-tilty.i1 { left: 18%; bottom: 10%; }
+.cart-tilty.i2 { left: 30%; bottom: 12%; } */
+
+/* Position helpers for stacks on the hero */
+.tilt-pos-1 { left: 18%; bottom: 14%; }
+.tilt-pos-2 { right: 14%; bottom: 18%; } /* example if you add a second stack */
+
+/* If .cart-grid already defines your grid columns, keep it there */
+/* .cards { display: contents; } lets children participate in the outer grid */
+
+/* Smoother transforms */
+/* .cart-grid > * { will-change: transform; } */
+
+/* @media (prefers-reduced-motion: reduce) {
+  .cart-grid * { transition: none !important; }
+} */
 
 /* ---------- Slideshow Styles ---------- */
 /* 
