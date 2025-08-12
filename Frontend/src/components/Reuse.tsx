@@ -1,43 +1,35 @@
 import React from "react";
-import "./Cart.css"
+import "./Cart.css";
 
 interface Components {
-  style?: String;
-  name: String;
-  image?: string;
-  id?: string;
+  name: string;
   subtitle?: string;
-  detail?: string;
   descriptions?: string;
   price?: number;
-  quantity?: number;
   ratings: number;
+  image?: string;
 }
 
 const CardReu: React.FC<Components> = ({
-  style,
   name,
-  id,
-  image,
-  detail,
   subtitle,
   descriptions,
   price,
-  quantity,
   ratings,
+  image,
 }) => {
+
   return (
-    <>
-      <div className="product-card"> 
-        <h1 className="product-info">{name}</h1>
-        <h2 className="subtitle">{subtitle}</h2>
-        {/* <h3 className="details">{descriptions}</h3> */}
-        <p className="description">{descriptions}</p>
-        <p className="price">{price}</p>
-        <p className="rating">{ratings}</p>
-        <button className="btn primary">Add to Cart</button> 
+    <div className="home-card">
+      {image && <img className="home-card-img" src={image} alt={name} />}
+      <div className="home-card-info">
+        <h3 className="home-card-title">{name}</h3>
+        {subtitle && <p className="home-card-sub">{subtitle}</p>}
+        {descriptions && <p className="home-card-desc">{descriptions}</p>}
+        {price && <p className="home-card-price">£{price.toFixed(2)}</p>}
+        <button className="home-card-btn">Shop now</button>
       </div>
-    </>
+    </div>
   );
 };
 
