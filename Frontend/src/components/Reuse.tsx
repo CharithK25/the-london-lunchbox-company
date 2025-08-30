@@ -10,26 +10,19 @@ interface Components {
   image?: string;
 }
 
-const CardReu: React.FC<Components> = ({
-  name,
-  subtitle,
-  descriptions,
-  price,
-  ratings,
-  image,
-}) => {
+const CardReu: React.FC<Components> = (props) => {
 
   return (
     <div className="home-card">
-      {image && <img className="home-card-img" src={image} alt={name} />}
+      {props.image && <img className="home-card-img" src={props.image} alt={props.name} />}
       <div className="home-card-info">
-        <h3 className="home-card-title">{name}</h3>
-        {subtitle && <p className="home-card-sub">{subtitle}</p>}
-        {descriptions && <p className="home-card-desc">{descriptions}</p>}
-        {price && <p className="home-card-price">£{price.toFixed(2)}</p>}
+        <h3 className="home-card-title">{props.name}</h3>
+        {props.subtitle && <p className="home-card-sub">{props.subtitle}</p>}
+        {props.descriptions && <p className="home-card-desc">{props.descriptions}</p>}
+        {props.price && <p className="home-card-price">£{props.price.toFixed(2)}</p>}
         <button className="home-card-btn">Shop now</button>
       </div>
-    </div>
+    // </div>
   );
 };
 

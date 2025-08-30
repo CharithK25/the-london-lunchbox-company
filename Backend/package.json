@@ -1,26 +1,19 @@
 {
-  "name": "backend",
+  "name": "london-lunchbox-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "type": "commonjs",
   "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
     "start": "tsc && node dist/index.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+    "db:init": "psql postgresql://admin:secret@localhost:5432/lunchboxdb -f sql/init.sql",
+    "db:seed": "psql postgresql://admin:secret@localhost:5432/lunchboxdb -f sql/seed.sql"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.0",
-    "express": "^5.1.0",
-    "mysql2": "^3.14.2"
-  },
-  "description": "",
   "devDependencies": {
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.0.15",
-    "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "@types/cors": "^2.8.19",
+    "@types/morgan": "^1.9.10",
+    "@types/pg": "^8.15.5"
   }
 }

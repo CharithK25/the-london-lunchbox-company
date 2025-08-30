@@ -74,7 +74,7 @@
 }
 
 .product-img img:hover {
-  transform: rotate(360deg) scale(1.05);
+  transform: rotate(15deg) scale(1.05);
 }
 
 .product-info {
